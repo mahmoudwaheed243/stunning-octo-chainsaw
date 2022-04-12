@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gpatable">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Provide The Following Details"
+        android:gravity="center"
+        tools:ignore="MissingConstraints"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:id="@+id/textview2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/gobackground"
+        >
+    </TextView>
+    <EditText
+        android:id="@+id/edittext2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edite_text_border"
+        android:gravity="center"
+        android:hint="Total Credit Hours"
+        android:padding="10dp"
+        android:textColorHint="@color/entercoursecont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview2"
+        android:textColor="@color/entercoursecont"
+        android:layout_marginTop="20dp"
+        >
+    </EditText>
+
+    <EditText
+        android:id="@+id/edittext3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/edite_text_border"
+        android:gravity="center"
+        android:hint="Your GPA "
+        android:padding="10dp"
+        android:textColor="@color/entercoursecont"
+        android:textColorHint="@color/entercoursecont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edittext2"></EditText>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gobackground"
+        android:layout_alignParentLeft="true"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/edittext3"
+        android:layout_marginTop="5dp"
+        >
+        <HorizontalScrollView
+            android:id="@+id/hscrll1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:id="@+id/table_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" >
+                </TableLayout>
+            </RelativeLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/evaluatebutton"
+        android:text=" EVALUATE ! "
+        android:textColor="@color/white"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/gobackground"
+        tools:ignore="UnknownId"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        >
+    </Button>
+</android.support.constraint.ConstraintLayout>
